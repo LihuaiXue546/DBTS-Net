@@ -21,6 +21,14 @@ pip install -r requirements.txt
 
 ### Data Preparation
 
+
+The **FUMPE** dataset  is used in this project.
+
+**Download link:**  
+[https://www.kaggle.com/datasets/andrewmvd/pulmonary-embolism-in-ct-images](https://www.kaggle.com/datasets/andrewmvd/pulmonary-embolism-in-ct-images)
+
+**Note:** The dataset contains CTA images from 35 patients with expert-annotated ground truth masks for pulmonary embolism.
+
 The dataset structure should follow this format:
 ```bash
 preprocessed_data/
