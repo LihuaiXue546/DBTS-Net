@@ -19,7 +19,7 @@ cd DBTS-Net
 pip install -r requirements.txt
 ```
 
-Data Preparation
+## Data Preparation
 
 The **FUMPE** dataset  is used in this project.
 
@@ -29,6 +29,7 @@ The **FUMPE** dataset  is used in this project.
 **Note:** The dataset contains CTA images from 35 patients with expert-annotated ground truth masks for pulmonary embolism.
 
 The dataset structure should follow this format:
+```bash
 preprocessed_data/
 ├── csv/
 │   ├── train.csv
@@ -39,6 +40,7 @@ preprocessed_data/
 └── val/
     ├── image/
     └── label/
+```
 CSV files should contain:
 - `image_name`: Filename of the input image
 - `mask_name`: Filename of the corresponding label
