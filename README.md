@@ -45,7 +45,7 @@ CSV files should contain:
 - `image_name`: Filename of the input image
 - `mask_name`: Filename of the corresponding label
 
-### Training
+## Training 
 
 ```bash
 # Basic training command
@@ -60,7 +60,7 @@ python main.py --model_type DBTS-Net \
     --devicenum 0
 ```
 
-### Inference
+## Inference
 
 ```bash
 # Run inference on validation set
