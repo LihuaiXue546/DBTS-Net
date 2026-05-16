@@ -22,17 +22,17 @@ pip install -r requirements.txt
 ### Data Preparation
 
 The dataset structure should follow this format:
+```bash
 preprocessed_data/
 ├── csv/
 │   ├── train.csv
-│   ├── val.csv
+│   └── val.csv
 ├── train/
 │   ├── image/
 │   └── label/
-├── val/
-│   ├── image/
-│   └── label/
-
+└── val/
+    ├── image/
+    └── label/
 CSV files should contain:
 - `image_name`: Filename of the input image
 - `mask_name`: Filename of the corresponding label
