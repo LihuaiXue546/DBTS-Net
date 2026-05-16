@@ -14,7 +14,7 @@ DBTS-Net is a dual-branch deep learning network designed for thrombus segmentati
 ```bash
 conda create -n dbtsnet python=3.10
 conda activate dbtsnet
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/LihuaiXue546/DBTS-Net.git)
 cd DBTS-Net
 pip install -r requirements.txt
 ```
@@ -22,3 +22,43 @@ pip install -r requirements.txt
 ### Data Preparation
 
 The dataset structure should follow this format:
+preprocessed_data/
+├── csv/
+│   ├── train.csv
+│   ├── val.csv
+├── train/
+│   ├── image/
+│   └── label/
+├── val/
+│   ├── image/
+│   └── label/
+
+CSV files should contain:
+- `image_name`: Filename of the input image
+- `mask_name`: Filename of the corresponding label
+
+### Training
+
+```bash
+# Basic training command
+python main.py --model_type DBTS-Net
+
+# Training with custom parameters
+python main.py --model_type DBTS-Net \
+    --batch_size 16 \
+    --lr 0.0001 \
+    --end_epoch 100 \
+    --custom_save_dir /path/to/save/directory \
+    --devicenum 0
+```
+
+### Inference
+
+```bash
+# Run inference on validation set
+python infer.py --model_type DBTS-Net \
+    --custom_save_dir /path/to/model/checkpoint \
+    --result_dir /path/to/save/results \
+    --use_best_model
+```
+
